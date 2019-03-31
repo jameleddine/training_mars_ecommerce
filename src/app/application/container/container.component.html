@@ -1,0 +1,52 @@
+<!-- <button class="btn btn-danger" [disabled]="etat" (click)="callfunction()">Click !</button>
+{{count}}
+<img src="{{imgsrc}}">
+<img [src]="imgsrc">
+<button class="btn btn-success" (click)="increment()">+</button>
+{{count}}
+<button class="btn btn-danger" (click)="decrement()">-</button>
+<input type="number" [(ngModel)]="a">
++
+<input type="number" [(ngModel)]="b" (change)="somme()">
+<span>{{c}}</span>
+ -->
+
+<div class="form-group">
+    <label>Nom</label>
+    <input class="form-control" [(ngModel)]="nom">
+</div>
+<div class="form-group">
+    <label>Email</label>
+    <input class="form-control" [(ngModel)]="email">
+</div>
+<div class="form-group">
+    <label>Phone</label>
+    <input class="form-control" [(ngModel)]="phone">
+</div>
+<div class="form-group">
+    <label>About</label>
+    <textarea class="form-control" [(ngModel)]="about"></textarea>
+</div>
+
+<button class="btn btn-info" *ngIf="nom != ''" (click)="save()">Save</button>
+
+<table class="table" appHtml>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+        </tr>
+        <tr>
+            <th>Search by name :</th>
+            <th><input class="form-control" [(ngModel)]="nome"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let item of HEROES | search:nome" [ngClass]='{"red":item.name == "Superman",
+                                                    "black":item.name == "Batman",
+                                                    "yellow":item.name == "Robin"}'>
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+        </tr>
+    </tbody>
+</table>

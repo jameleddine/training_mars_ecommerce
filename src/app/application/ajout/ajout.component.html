@@ -1,0 +1,36 @@
+<h1>Ajout nouveau produit</h1>
+
+<div class="form-group">
+  <label>Titre de produit</label>
+  <input class="form-control" type="text" [(ngModel)]="titre">
+</div>
+<div class="form-group">
+  <label>Description de produit</label>
+  <input class="form-control" type="text" [(ngModel)]="description">
+</div>
+
+<div class="form-group">
+  <label>Prix</label>
+  <input class="form-control" type="text" [(ngModel)]="price">
+</div>
+
+<div class="form-group">
+  <label>Type de produit</label>
+  <select [(ngModel)]="type" class="form-control">
+    <option value="cosmotique">Cosmotique</option>
+    <option value="alimentaire">Alimentaire</option>
+    <option value="electronique">Electronique</option>
+  </select>
+</div>
+
+<div class="form-group row  col-md-6">
+  <label class=" row col-md-6">Photo : </label>
+<div class=" row custom-file col-md-6">
+<div class="image-upload">
+  <img [src]="imageSrc" style="max-width:300px;max-height:300px"/>
+  <input name="imageUrl" type="file" accept="image/*" (change)="handleInputChange($event)" />
+  </div> 
+</div>
+</div>
+
+<button class="btn btn-success" (click)="save()" >Ajouter</button>

@@ -1,0 +1,15 @@
+<h1>{{'product_list'|translate}}</h1>
+
+
+
+<div class="products">
+    <div class="product" *ngFor="let produit of products">
+      <div class="preview">
+        <img src="{{produit.photo}}" width="150px" height="auto">
+      </div>
+      <div class="details" [routerLink]="['gestion',produit._id]">
+        <div class="name">{{produit.title}}</div>
+        <div class="price">{{produit.price}}</div>
+      </div>
+    </div>
+  </div>

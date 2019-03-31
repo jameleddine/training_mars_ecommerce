@@ -1,0 +1,34 @@
+<h1>Edit produit</h1>
+
+<div class="form-group">
+  <label>Titre de produit</label>
+  <input class="form-control" type="text" [(ngModel)]="produit.title">
+</div>
+<div class="form-group">
+  <label>Description de produit</label>
+  <input class="form-control" type="text" [(ngModel)]="produit.description">
+</div>
+
+<div class="form-group">
+  <label>Prix</label>
+  <input class="form-control" type="text" [(ngModel)]="produit.price">
+</div>
+
+<div class="form-group">
+  <label>Type de produit</label>
+  <select [(ngModel)]="produit.product_type" class="form-control">
+    <option value="cosmotique">Cosmotique</option>
+    <option value="alimentaire">Alimentaire</option>
+    <option value="electronique">Electronique</option>
+  </select>
+</div>
+
+<div class="form-group">
+  <img [src]="produit.photo" style="max-width:300px;max-height:300px"/>
+  <input name="imageUrl" type="file" accept="image/*" (change)="handleInputChange($event)" />
+  
+</div>
+
+
+<button class="btn btn-success" (click)="save()" >Modifier</button>
+<button class="btn btn-danger" (click)="delete()" >Supprimer</button>

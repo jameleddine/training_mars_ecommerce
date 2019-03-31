@@ -1,0 +1,64 @@
+@import url(https://fonts.googleapis.com/css?family=Abel|Indie+Flower);
+
+body {
+  font-family: Abel;
+}
+
+h1 {
+  margin: 0;
+  padding: 10px;
+  font-family: 'Indie Flower';
+  float: left;
+}
+
+nav {
+  float: right;
+  margin: 10px;
+}
+
+header {
+  background: #e4f2d6;
+  border-bottom: 2px solid #a4b296;
+  overflow: hidden;
+}
+footer {
+  background: #eee;
+  padding: 10px;
+  text-align: center;
+  clear: both;
+}
+.main {
+  min-height: calc(100vh - 128px);
+}
+
+ul {
+  list-style: none;
+  float: left;
+}
+.sidebar {
+  width: 200px;
+}
+.products {
+  float: left;
+  width: calc(100% - 200px);
+}
+.product {
+  display: inline-block;
+  margin: 5px;
+  background: #eee;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.details .name {
+  float: left;
+  color: #a4b296;
+}
+.details .price {
+  float: right;
+}
+
+.details .price:before {
+  content: "$";
+  opacity: .3;
+}
